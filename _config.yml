@@ -1,12 +1,12 @@
-permalink: /:year:month:day/:title
+permalink: /:year/:month/:day/:title
 url: #Your url here
-baseurl: /project
 
 # variables
-name: Your Site Name
+name: "C:"
 description: Your description here
 google_verification: null
 
+future: true
 
 # File management
 include: [".htaccess"]
@@ -23,3 +23,8 @@ kramdown:
   input: GFM
   syntax_highlighter_opts:
     disable : true
+
+# Icons
+icons:
+  articles: file.ico
+  crosswords: crossword.png

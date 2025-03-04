@@ -1,13 +1,23 @@
+@font-face {
+	font-family: 'Windows';
+	src: url('../fonts/Windows.woff2') format('woff2'),
+		url('../fonts/Windows.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
 body {
 	background: #008082;
-	font-family: sans-serif, serif, monospace;
-	font-size: 13px;
+	font-family: 'Windows', 'Roboto Condensed', sans-serif, serif, monospace;
+	font-size: 1rem;
 }
 
 .wrapper, .content {
 	width: 800px;
 	margin: auto;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	background: #bfb8bf;
 	border: 2px solid;
 	border-color: #fff8ff #000000 #000000 #fff8ff;
@@ -19,7 +29,7 @@ body {
 
 	h1 {
 		color: #bfb8bf;
-		font-size: 14px;
+		font-size: 1.1rem;
 		font-weight: bold;
 	}
 	
@@ -51,7 +61,7 @@ body {
 			font-size: 11px;
 			position: relative;
 			left: 2px;
-			top: -2px;
+			top: -3px;
 		}
 
 		.fa-window-minimize {
@@ -108,10 +118,12 @@ ul.topbar {
 		li {
 			display: inline-block;
 			margin: 10px;
+			min-width: 10ch;
 			max-width: 16ch;
+			height: 70px;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			white-space: nowrap;
+			//white-space: nowrap;
 			text-align: center;
 
 			img {
@@ -186,15 +198,29 @@ ul.topbar {
 		margin-right: 2px;
 	}
 }
-.post_content {
-	position: relative;
-	width: 98.5%;
+.b-0 {
+	padding: 0px !important;
 	min-height: 600px;
 	max-height: 600px;
-	padding: 2px;
+	overflow-y: clip !important;
+	>* {
+		padding-left: 0vw !important;
+		padding-right: 0vw !important;
+	}
+}
+.post_content {
+	position: relative;
+	width: 99.5%;
+	max-height: 60vh;
+	padding-top: 2vw;
+	padding-bottom: 1vw;
 	margin: 0 auto;
 	overflow-y: scroll;
-	overflow-x: scroll;
+
+	* {
+		padding-left: 2vw;
+		padding-right: 2vw;
+	}
 
 	p {
 		line-height: 150%;
@@ -207,13 +233,13 @@ ul.topbar {
 	}
 
 	h1 {
-		font-size: 20px;
+		font-size: 1.25rem;
 		font-weight: 700;
-		margin: 50px 0 10px 0;
+		margin: 0 0 10px 0;
 	}
 
 	h2 {
-		font-size: 18px;
+		font-size: 1.125rem;
 		font-weight: 700;
 		margin: 25px 0 5px 0;
 	}
@@ -436,3 +462,32 @@ ul.topbar {
 ::-webkit-scrollbar-corner {
 	background-color: #cacaca;
 } /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+.desktop-icons {
+	position: absolute;
+	left: 20px;
+	top: 0px;
+	z-index: 2000;
+
+	div {
+		div {
+			margin-top: 20px;
+
+			img {
+				width: 45px;
+				height: 45px;
+				display: block;
+				margin: 0 auto 10px;
+			}
+
+			p {
+				text-align: center;
+				display: block;
+				margin: 0 auto;
+				color: white;
+				cursor: default;
+			}
+		}
+	}
+
+}

@@ -26,10 +26,8 @@
 			<img src="/assets/img/mycomputer.png" />
 			{% if page.tag %}
 				<h1>Exploring - C:\{{ page.tag }}</h1>
-			{% elsif page.tags %}
-				<h1>Exploring - C:\{{ page.tags.first }}\{{ page.title }}</h1>
 			{% else %}
-				<h1>Exploring - C:\{{ page.title }}</h1>
+				<h1>Exploring - C:\{{ page.tags.first }}\{{ page.title }}</h1>
 			{% endif %}
 		</div>
 		{% include topbar.html %}
@@ -76,7 +74,7 @@
 					{% else %}
 						<li>
 							<a href="{{ post.url }}" title="{{ post.title }}">
-								<img src="/assets/img/{{ site.icons[post.tags.first] }}" title="{{ post.title }}" />
+								<img src="/assets/img/{{ site.icons[post.tags.first] }}" title="{{ post.tags.first }}" />
 								{{ post.title }}
 							</a>
 						</li>
@@ -98,7 +96,7 @@
         <div class="content">
 			<div class="post_title">
 				<img src="/assets/img/{{ site.icons[post.tags.first] }}" />
-				<h1>{{  page.title  }}</h1>
+				<h1>{{ page.title }}</h1>
 				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
 				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
 				<div class="btn"><span class="fa fa-window-minimize"></span></div>
@@ -106,9 +104,9 @@
 			<ul class="topbar">
 				<li>{{ page.date | date: '%B %-d, %Y' }}</li>
 			</ul>
-			<div class="post_content">
-				<h1>{{ page.title }}</h1>
-        		{{ content }}
+			<div class="post_content b-0">
+				<!--<iframe style="height: 57vh; width: 100%;" src="https://crosshare.org/embed/xnWnXUtaozzMIyNAJvn1/RGzbexmJHTQfPfuGyzmV0esYi7y1" frameborder="0" allowfullscreen="true" allowtransparency="true" allow="clipboard-write *"></iframe>-->
+				<iframe src="https://crosswordr.com/e/puzzle/{{ page.gameurl }}" allowfullscreen style="width: 100%; height: 600px; border: 0px;"></iframe>
 			</div>
 		</div>
     {% endif %}
