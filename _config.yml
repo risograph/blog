@@ -2,7 +2,7 @@ permalink: /:year/:month/:day/:title
 url: #Your url here
 
 # variables
-name: "C:"
+title: "risograph"
 description: Your description here
 google_verification: null
 
