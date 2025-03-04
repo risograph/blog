@@ -1,9 +1,9 @@
 permalink: /:year/:month/:day/:title
-url: #Your url here
+url: risograph.xyz
 
 # variables
 title: "risograph"
-description: Your description here
+description: wharever bro...
 google_verification: null
 
 future: true
