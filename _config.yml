@@ -19,10 +19,10 @@ sass:
 
 # Markdown
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter_opts:
-    disable : true
+#kramdown:
+#  input: GFM
+#  syntax_highlighter_opts:
+#    disable : true
 
 # Icons
 icons:

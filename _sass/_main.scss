@@ -217,7 +217,7 @@ ul.topbar {
 	margin: 0 auto;
 	overflow-y: scroll;
 
-	* {
+	>* {
 		padding-left: 2vw;
 		padding-right: 2vw;
 	}
@@ -225,6 +225,12 @@ ul.topbar {
 	p {
 		line-height: 150%;
 		margin-bottom: 15px;
+
+		img {
+			max-height: 600px;
+			max-width: 100%;
+		}
+
 	}
 
 	a {
@@ -334,6 +340,9 @@ ul.topbar {
     .content {
         width: 90%;
     }
+	.desktop-icons {
+		display: none;
+	}
 }
 @media only screen and (max-width: 700px) {
     .content {
@@ -365,6 +374,8 @@ ul.topbar {
 @media only screen and (max-width: 750px) {
 	.tag_list {
 		width: 99%;
+		min-height: min-content;
+		padding-bottom: 10px;
 	}
 	.post_list {
 		width: 99%;
@@ -467,7 +478,7 @@ ul.topbar {
 	position: absolute;
 	left: 20px;
 	top: 0px;
-	z-index: 2000;
+	z-index: -1;
 
 	div {
 		div {
